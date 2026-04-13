@@ -1,0 +1,187 @@
+:root {
+      --bg-main: #0d1117;
+      --bg-card: #161b22;
+      --text-main: #f8f9fa;
+      --text-soft: #d0d7de;
+      --accent-cyan: #66e3ff;
+      --accent-purple: #9b7bff;
+      --accent-pink: #ff6fd8;
+      --border-soft: #30363d;
+      --focus-ring: #66e3ff;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: radial-gradient(circle at top left, rgba(155,123,255,0.18), transparent 30%),
+                  radial-gradient(circle at top right, rgba(255,111,216,0.12), transparent 28%),
+                  linear-gradient(180deg, #090c10 0%, var(--bg-main) 100%);
+      color: var(--text-main);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent-cyan);
+    }
+
+    a:hover,
+    a:focus {
+      color: #9cecff;
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    .btn:focus-visible,
+    .nav-link:focus-visible,
+    .form-control:focus-visible,
+    .navbar-toggler:focus-visible {
+      outline: 3px solid var(--focus-ring);
+      outline-offset: 3px;
+      box-shadow: none !important;
+      border-radius: 0.375rem;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: 1rem;
+      top: -40px;
+      background: #ffffff;
+      color: #000000;
+      padding: 0.75rem 1rem;
+      z-index: 2000;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .skip-link:focus {
+      top: 1rem;
+    }
+
+    .navbar {
+      background: rgba(9, 12, 16, 0.9) !important;
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .navbar-brand,
+    .nav-link {
+      color: var(--text-main) !important;
+    }
+
+     .nav-link:hover,
+    .nav-link:focus {
+      color: var(--accent-pink) !important;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 6rem;
+      padding-bottom: 4rem;
+    }
+
+    .hero-card,
+    .project-card,
+    .info-card {
+      background-color: rgba(22, 27, 34, 0.9);
+      border: 1px solid var(--border-soft);
+      border-radius: 1rem;
+      box-shadow: 0 0 0 1px rgba(255,255,255,0.02);
+    }
+
+    .hero-title {
+      font-size: clamp(2.4rem, 6vw, 4.5rem);
+      font-weight: 800;
+      line-height: 1.1;
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple), var(--accent-pink));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .section-title {
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .section-subtitle,
+    .text-soft {
+      color: var(--text-soft);
+      max-width: 60ch;
+    }
+
+    .btn-primary-custom {
+      background: linear-gradient(90deg, var(--accent-purple), var(--accent-pink));
+      border: none;
+      color: white;
+      font-weight: 700;
+    }
+
+    .btn-primary-custom:hover,
+    .btn-primary-custom:focus {
+      filter: brightness(1.08);
+      color: white;
+    }
+
+    .btn-outline-custom {
+      border: 1px solid var(--accent-cyan);
+      color: var(--accent-cyan);
+      font-weight: 700;
+    }
+
+    .btn-outline-custom:hover,
+    .btn-outline-custom:focus {
+      background-color: rgba(102, 227, 255, 0.12);
+      color: white;
+      border-color: var(--accent-cyan);
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 0.4rem 0.8rem;
+      margin: 0.2rem;
+      border-radius: 999px;
+      background: rgba(155,123,255,0.14);
+      border: 1px solid rgba(155,123,255,0.35);
+      color: var(--text-main);
+      font-size: 0.95rem;
+    }
+
+    .project-card img {
+      border-top-left-radius: 1rem;
+      border-top-right-radius: 1rem;
+      object-fit: cover;
+      height: 240px;
+      width: 100%;
+    }
+
+    .project-card h3,
+    .info-card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    .project-links a {
+      margin-right: 1rem;
+      font-weight: 700;
+    }
+
+    footer {
+      border-top: 1px solid var(--border-soft);
+      color: var(--text-soft);
+    }
+
+    .loading-placeholder {
+      padding: 3rem 1rem;
+      text-align: center;
+      color: var(--text-soft);
+    }
